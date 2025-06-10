@@ -1,0 +1,27 @@
+@model List<SeuProjeto.Models.Usuario>
+
+<h2>Lista de Usuários</h2>
+
+<a href="/Usuarios/Create">Cadastrar Novo Usuário</a>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Matrícula</th>
+            <th>Função</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var usuario in Model)
+    {
+        <tr>
+            <td>@usuario.ID</td>
+            <td>@usuario.Nome</td>
+            <td>@usuario.Matricula</td>
+            <td>@usuario.Funcao</td>
+        </tr>
+    }
+    </tbody>
+</table>
